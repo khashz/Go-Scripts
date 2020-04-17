@@ -15,11 +15,10 @@ func executor(execorname string, speed time.Duration, ch chan string, wg *sync.W
 }
 
 func main() {
-
 	var wg sync.WaitGroup
 
 	// If we allocate storage to the channel, it doesnt crash if no worker is
-	// there to receive the message 
+	// there to receive the message
 	ch := make(chan string, 20)
 
 	for i := 0; i < 20; i++ {
