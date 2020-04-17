@@ -6,7 +6,6 @@ import (
 	"sync"
 )
 
-
 func executor(execorname string, speed time.Duration, ch chan string, wg *sync.WaitGroup) {
 	defer wg.Done()
 	for job := range ch {
